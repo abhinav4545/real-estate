@@ -1,16 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import  {DarkModeProvider} from './components/DarkModeContext'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Hero from './sections/Hero'
+import About from './sections/About'
+import PopularAreas from './sections/PopularAreas'
+import  Services from './sections/Services'
+import Clients from './sections/Clients'
+import Contacts from './sections/Contacts'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+const App = () => {
   return (
-    <>
-      <h1 className="text-5xl font-bold underline">Hello doston, start krte hai apna Project</h1> 
-    </>
+    <DarkModeProvider>
+      <Header />
+      <Hero />
+      <About />
+      <PopularAreas />
+      <Services />
+      <Clients />
+      <Contacts />
+      <Footer />
+    </DarkModeProvider>
   )
 }
 
-export default App
+export default App;
